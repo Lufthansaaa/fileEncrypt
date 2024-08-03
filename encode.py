@@ -18,10 +18,10 @@ binary_data = file_to_binary(f'{name}')
 binary_to_image(binary_data, f'output_image.png')
 
 with open('output_image.png', 'rb') as f:
-    webhook.add_file(file=f.read(), filename='pixels.png')
+    webhook.add_file(file=f.read(), filename='output_image.png')
 
 embed.set_author(name="Image Encrypt",icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F236x%2Fa7%2Fd7%2Fb7%2Fa7d7b7ff01a18d719f63ccef5a699d29.jpg&f=1&nofb=1&ipt=4e4204fb6ef3e40184e35ab2aeeee996bca7d98a1283a487bb0cfde9b453bcb3&ipo=images", url="https://github.com/Lufthansaaa")
-embed.set_image(url="attachment://pixels.png")
+embed.set_image(url="attachment://output_image.png")
 
 webhook.add_embed(embed)
 
